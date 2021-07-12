@@ -95,32 +95,34 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
+/* Alacritty's default colors */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	[0] = "#1d1f21", /* black   */
+	[1] = "#cc6666", /* red     */
+	[2] = "#b5bd68", /* green   */
+	[3] = "#f0c674", /* yellow  */
+	[4] = "#81a2be", /* blue    */
+	[5] = "#b294bb", /* magenta */
+	[6] = "#8abeb7", /* cyan    */
+	[7] = "#c5c8c6", /* white   */
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	[8]  = "#666666", /* black   */
+	[9]  = "#d54e53", /* red     */
+	[10] = "#b9ca4a", /* green   */
+	[11] = "#e7c547", /* yellow  */
+	[12] = "#7aa6da", /* blue    */
+	[13] = "#c397d8", /* magenta */
+	[14] = "#70c0b1", /* cyan    */
+	[15] = "#eaeaea", /* white   */
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#cccccc",
 	"#555555",
+	"black",
 };
 
 

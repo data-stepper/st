@@ -2073,6 +2073,14 @@ updatescheme(void)
 		tupdatefgcolor(oldfg, defaultfg);
 	cresize(win.w, win.h);
 	redraw();
+	if BETWEEN(colorname[defaultbg][1], 'd', 'f') {
+		// light background
+		FILE* file_ptr = fopen("/tmp/st-light", "w");
+		fclose(file_ptr);
+	} else {
+		// dark background
+		remove("/tmp/st-light");
+	}
 }
 
 int
